@@ -5,7 +5,7 @@ const CourseList = ({courses}) => {
   return (
     <Row xs={1} md={2}>
       {courses.map(course => (
-        <Col key={course.id}>
+        <Col key={course.id} className="mb-4">
           <CoursePrev course={course} />
         </Col>
       ))}

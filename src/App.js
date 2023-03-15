@@ -3,7 +3,7 @@ import getCoursrs from './get/getCourses';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container mt-4 mb-5">
       <Courses {...getCoursrs} />
     </div>
   );

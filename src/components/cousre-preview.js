@@ -2,13 +2,12 @@ import {Image ,Button, Dropdown} from 'react-bootstrap';
 import StarRating from './raiting';
 
 const CoursePrev = ({course}) => {
-  const { title, previewImageLink, lessonsCount, rating, description } = course;
+  const { id, title, previewImageLink, lessonsCount, rating, description } = course;
   const { skills } = course.meta;
-  console.log(skills)
   const urlPreviewImage = previewImageLink + '/cover.webp';
 
   return (
-    <div className="card shadow bg-body-tertiary rounded ">
+    <div className="card shadow bg-body-tertiary rounded" key={id}>
       <Image
         className='img-fluid border-0 rounded-top'
         src={urlPreviewImage}
@@ -26,17 +25,19 @@ const CoursePrev = ({course}) => {
           <p className="text-sm text-muted col mb-0 p-2">Rating: </p>
           <StarRating rating={rating}/>
         </div>
-        <div className='dropup d-flex gap-2'>
+      <div className='dropup d-flex gap-2'>
+        {!!skills ? (
           <Dropdown drop='up'>
             <Dropdown.Toggle variant="warning">Skills </Dropdown.Toggle>
             <Dropdown.Menu>
               {skills.map(skill => (
-                <Dropdown.Item>{skill}</Dropdown.Item>
+                <Dropdown.Item className='disabled text-dark'>{skill}</Dropdown.Item>
               ))}
             </Dropdown.Menu>
           </Dropdown>
-          <Button className='col-auto text-inherit'>Read more</Button>
-        </div>
+        ) : ('')}
+        <Button className='col-auto text-inherit'>Read more</Button>
+      </div>
       </div>
     </div>
   )

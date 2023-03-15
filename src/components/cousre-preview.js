@@ -1,5 +1,7 @@
 import {Image ,Button, Dropdown} from 'react-bootstrap';
 import StarRating from './raiting';
+import { Link } from "react-router-dom";
+
 
 const CoursePrev = ({course}) => {
   const { id, title, previewImageLink, lessonsCount, rating, description } = course;
@@ -18,12 +20,12 @@ const CoursePrev = ({course}) => {
         <h3 className="card-title fw-bold text-lg mb-0 text-center align-text-bottom">{title}</h3>
         <h5 className='p-3'>{description}</h5>
 
-        <p className="text-sm mb-0 text-muted">{lessonsCount} lessons</p>
+        <p className="text-sm mb-0 text-muted px-2">{lessonsCount} lessons</p>
       </div>
       <div className='card-footer d-flex justify-content-between align-items-center'>
         <div className='d-flex'>
           <p className="text-sm text-muted col mb-0 p-2">Rating: </p>
-          <StarRating rating={rating}/>
+          <StarRating className='h-100' rating={rating}/>
         </div>
       <div className='dropup d-flex gap-2'>
         {!!skills ? (
@@ -36,10 +38,18 @@ const CoursePrev = ({course}) => {
             </Dropdown.Menu>
           </Dropdown>
         ) : ('')}
-        <Button className='col-auto text-inherit'>Read more</Button>
-      </div>
+
+        <Button >
+          <Link
+            className='text-decoration-none text-white'
+            to={`/about/${course.id}`}
+            >
+            Read more
+          </Link>
+        </Button>
       </div>
     </div>
+  </div>
   )
 }
 

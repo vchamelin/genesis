@@ -15,7 +15,7 @@ const Pagination = ({ currentPage, maxPage, onPageChange }) => {
 
   return (
     <nav aria-label="Page navigation example">
-      <ul className="pagination">
+      <ul className="pagination d-flex justify-content-center">
         <li className="page-item"><button
                                 className="page-link"
                                 onClick={prevPage}

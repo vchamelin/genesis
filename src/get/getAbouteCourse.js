@@ -1,4 +1,4 @@
-export const data = {
+const course = {
   "id": "352be3c6-848b-4c19-9e7d-54fe68fef183",
   "title": "Lack of Motivation & How to Overcome It",
   "tags": [
@@ -84,3 +84,5 @@ export const data = {
   ],
   "containsLockedLessons": true
 }
+
+export default course;

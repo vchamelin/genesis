@@ -3,10 +3,10 @@ import CoursePrev from './cousre-preview';
 
 const CourseList = ({courses}) => {
   return (
-    <Row xs={1} md={2}>
+    <Row xs={1} md={2} >
       {courses.map((course, ind) => (
-        <Col key={course.id} className="mb-4">
-          <CoursePrev course={course} key={ind}/>
+        <Col key={ind} className="mb-4">
+          <CoursePrev course={course}/>
         </Col>
       ))}
     </Row>

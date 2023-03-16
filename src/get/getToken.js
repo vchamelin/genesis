@@ -1,3 +1,0 @@
-export const token = {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNDBmZjU5YS0xODc1LTRkZDYtYjA3NS1lNTZjYzZmYTY2NTQiLCJwbGF0Zm9ybSI6InN1YnNjcmlwdGlvbnMiLCJpYXQiOjE2Nzg4Nzg2MDksImV4cCI6MTY3OTc3ODYwOX0.tyCSYbllVJepE05ed__7Ckp_x8w5YCIBh_lv4nFbOvg"
-}

@@ -1,3 +1,5 @@
+import VideoPlayer from "./video-hls";
+
 const Lesson = ({lesson}) => {
   const { order, title, status, link, previewImageLink} = lesson;
 
@@ -5,10 +7,7 @@ const Lesson = ({lesson}) => {
     <div>
       <div>{order}</div>
       <div>{title}</div>
-      <video width="480" controls  >
-        <source src={link + '/' + order + '.webp'} type="video/webm" />
-        Your browser doesn't support HTML5 video tag.
-      </video>
+      <VideoPlayer link={link}/>
     </div>
   )
 }

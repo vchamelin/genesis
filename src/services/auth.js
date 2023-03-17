@@ -1,4 +1,4 @@
-import { HOST, VERSION, AUTHPATH } from "./dotEnv";
+import { HOST, VERSION, AUTHPATH } from "./dot-env";
 
 const Auth = async () => {
   const url = HOST + VERSION + AUTHPATH;

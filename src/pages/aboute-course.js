@@ -32,11 +32,11 @@ function AbouteCourse() {
   const { skills, courseVideoPreview } = dataCourse.meta;
 
   // console.log(dataCourse)
-
+  
   return (
     <div>
-      <Button>
-        <Link to={'/'}>Back</Link>
+      <Button className='btn btn-outline-danger'>
+        <Link to={'/'} >&#129044;</Link>
       </Button>
       <h1>{title}</h1>
       <h2>{description}</h2>

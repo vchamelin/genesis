@@ -11,7 +11,7 @@ const Auth = async () => {
       token = data.token;
       localStorage.setItem('token', token);
     } catch (error) {
-      console.error(error);
+      //console.error(error);
     }
   }
   return token;
